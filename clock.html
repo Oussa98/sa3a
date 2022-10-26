@@ -8,7 +8,7 @@
     <title>sa3a</title>
 </head>
 <body>
-    <div class="sa3a">
+    <div class="sa3a" id="sa3a">
         <div class="ro9as heur" data-hour-hand></div>
         <div class="ro9as min" data-min-hand></div>
         <div class="ro9as sec" data-sec-hand></div>
@@ -26,7 +26,30 @@
         <div class="num num11">11</div>
         <div class="num num12">12</div>
     </div>
-    
+    <div class="watch" id="watch">
+        <div class="box">
+            <div class="digit" id="heur1"></div>
+            <div class="digit" id="heur2"></div>
+            <div class="twodots">
+                <div class="dots dot1"></div>
+                <div class="dots dot2"></div>
+            </div>
+            <div class="digit" id="min1"></div>
+            <div class="digit" id="min2"></div>
+            <div class="twodots">
+                <div class="dots dot1"></div>
+                <div class="dots dot2"></div>
+            </div>
+            <div class="digit" id="sec1"></div>
+            <div class="digit" id="sec2"></div>
+        </div>
+    </div>
+
+    <label class="switch">
+        <input type="checkbox" name="myCheck" id = "myCheck" onclick="onCheck()">
+        <span class="slider"></span>
+      </label>
+
     <script src="scripts.js"></script>
 </body>
 </html>
