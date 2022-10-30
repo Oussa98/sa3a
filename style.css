@@ -8,20 +8,46 @@ body
   background:linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items:center;
   min-height: 100vh;
+  flex-direction: column;
   overflow: hidden;
 }
 
-
-
+/******************************/
+.switches{
+  /* position: absolute;
+  display: flex;
+  flex-direction: column; */
+  width:100%
+}
 .switch {
+  padding: 5px;
   position: absolute;
   width: 60px;
   height: 34px;
-  left:46%;
+  left:49%;
   top:90%;
 }
+
+
+#analog{
+  left:30%;
+  top:90%;
+}
+#digital{
+  left:40%;
+  top:90%;
+}
+#stopwatch{
+  left:55%;
+  top:90%;
+}
+#alarm{
+  left:65%;
+  top:90%;
+}
+
 
 .switch input { 
   opacity: 0;
@@ -67,7 +93,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -78,10 +103,58 @@ input:checked + .slider:before {
 
 
 
+
+/*******************************/
+
+
+.alarm{
+  display: none;
+}
+
+
+/*******************************/
+.stopwatch{display: none;}
+/* .stopwatch > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+#laps-text{
+
+  font-size: xx-large;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.buttons > button {
+  margin: 10px;
+  padding: 10px;
+  font-size: larger;
+}
+
+.thestopwatch
+{
+  display: flex;
+  justify-content: center;
+  padding-bottom : 10px;
+  font-size: x-large;
+  color: white;
+}
+
+
+
+/*******************************/
+
 .sa3a
 {
-  width: 300px;
-  height: 300px;
+  width: 275px;
+  height: 275px;
   background-color: rgba(255,255,255,.8);
   border-radius: 50%;
   border:2px solid black;
@@ -185,6 +258,7 @@ input:checked + .slider:before {
   border-radius: 10%;
   border:2px solid black;
   position:relative;
+  display: none;
 }
 
 .box{
@@ -216,7 +290,6 @@ input:checked + .slider:before {
   width: 50px;
   height: 120px;
   background-color: rgba(255, 255, 255, 0.1);
-  /* border : 2px solid black; */
   border-radius: 5%;
   display: flex;
   justify-content: center;
