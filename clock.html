@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>sa3a</title>
+    <title>time</title>
 </head>
 <body>
+    <div id="welcome">welcome, please choose one of these</div>
     <div class="sa3a" id="sa3a">
         <div class="ro9as heur" data-hour-hand></div>
         <div class="ro9as min" data-min-hand></div>
@@ -44,11 +45,46 @@
             <div class="digit" id="sec2"></div>
         </div>
     </div>
+    <div class="stopwatch" id="stopwatch">
+        <div class="laps">
+            <h5 id="laps-text">laps</h1>
+            <ol id="laps">
+            </ol>
+        </div>
+        <p class="thestopwatch"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens">00</span></p>
+        <div class="buttons">
+            <button id="start" onclick="onStart()">Start</button>
+            <button id="lap"   onclick="onLap()"  >Lap</button>
+            <button id="reset" onclick="onReset()">Reset</button>
+        </div>
+    </div>
+    <div class="alarm" id="alarm">
+        
+    </div>
+    
+    <div class="switches">
+        <label id="digital" class="switch">
+            <input type="checkbox" name="myDigital" id = "checkDigital" onclick="onCheckDigital()">
+            <span class="slider"></span>
+            <h4>Digital</h4>
+        </label>
+        <label id="analog" class="switch">
+            <input type="checkbox" name="myAnalog" id = "checkAnalog" onclick="onCheckAnalog()">
+            <span class="slider"></span>
+            <h4>Analog</h4>
+        </label>
+        <label id="stopwatch" class="switch">
+            <input type="checkbox" name="mystopwatch" id = "checkstopwatch" onclick="onCheckstopwatch()">
+            <span class="slider"></span>
+            <h4>stopwatch</h4>
+        </label>
+        <label id="alarm" class="switch">
+            <input type="checkbox" name="myAlarm" id = "checkAlarm" onclick="onCheckAlarm()">
+            <span class="slider"></span>
+            <h4>Alarm</h4>
+        </label>
 
-    <label class="switch">
-        <input type="checkbox" name="myCheck" id = "myCheck" onclick="onCheck()">
-        <span class="slider"></span>
-      </label>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
